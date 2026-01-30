@@ -1,6 +1,5 @@
 // Filename: internal/handlers/handlers.go
-// Handler functions executed by the router.
-
+// - Handler functions executed by the router.
 package handlers
 
 import (

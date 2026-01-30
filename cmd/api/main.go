@@ -1,11 +1,10 @@
 // Filename: cmd/api/main.go
-// A simple HTTP server with routes, handlers, and middleware.
+// - A simple HTTP server with routes, handlers, and middleware.
+package main
 
 // NOTE: Because the instructions specify a function signature of SetupRoutes(mux *http.ServeMux),
 // it can only handle route-specific middleware since the in-class middleware signature specifies
 // returning http.Handler. The SetupMux function was created to handle global middleware.
-
-package main
 
 import (
 	"log"

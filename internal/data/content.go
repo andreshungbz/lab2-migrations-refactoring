@@ -1,6 +1,5 @@
 // Filename: internal/data/content.go
-// Contains content used throughout the program.
-
+// - Contains content used throughout the program.
 package data
 
 // Routes contains a collection of route path and text.

@@ -1,6 +1,5 @@
 // Filename: internal/handlers/handlers_test.go
-// HTTP test requests for reponse status and body.
-
+// - HTTP test requests for response status and body.
 package handlers
 
 import (

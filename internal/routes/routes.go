@@ -1,6 +1,5 @@
 // Filename: internal/routes/routes.go
-// Registers all routes with handlers and applies all middleware.
-
+// - Registers all routes with handlers and applies all middleware.
 package routes
 
 import (

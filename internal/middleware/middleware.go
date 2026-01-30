@@ -1,6 +1,5 @@
 // Filename: internal/middleware/middleware.go
-// Contains various middleware functions for the routes.
-
+// - Contains various middleware functions for the routes.
 package middleware
 
 import (
