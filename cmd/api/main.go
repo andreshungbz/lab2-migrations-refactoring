@@ -17,7 +17,7 @@ import (
 )
 
 func main() {
-	// Flags
+	// FLAGS
 
 	// Server port
 	port := flag.Int("port", 4000, "Port to start the local server on.")
@@ -25,6 +25,8 @@ func main() {
 	if !(*port >= 1 && *port <= 65535) {
 		fmt.Fprintf(os.Stderr, "[ERROR] Port %d invalid. Port must be 1 - 65535.\n", *port)
 	}
+
+	// MAIN
 
 	// Route multiplexer setup
 	mux := http.NewServeMux()

@@ -10,7 +10,7 @@ import (
 	"github.com/andreshungbz/lab2-migrations-refactoring/internal/data"
 )
 
-// Unit Tests
+// UNIT TESTS
 
 func TestHomeHandler(t *testing.T) {
 	assertResponse(t, data.Routes["home"].Path, HomeHandler, data.Routes["home"].Text)
@@ -28,7 +28,7 @@ func TestCalculateHandler(t *testing.T) {
 	assertResponse(t, data.Routes["calculate"].Path, CalculateHandler, data.Routes["calculate"].Text)
 }
 
-// Helper Functions
+// HELPER FUNCTIONS
 
 // assertHTTP200 ensures that the HTTP response status code is 200 OK.
 func assertHTTP200(t *testing.T, got int) {
