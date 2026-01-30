@@ -1,4 +1,4 @@
-// Filename: internal/handlers.go
+// Filename: internal/handlers/handlers.go
 // Handler functions executed by the router.
 
 package handlers
