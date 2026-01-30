@@ -1,4 +1,9 @@
+# Local metadata files
 .vscode/
 .DS_Store
 
+# Binaries
 go-webapp
+
+# Sensitive files
+.envrc
