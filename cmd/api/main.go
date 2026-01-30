@@ -7,20 +7,32 @@ package main
 // returning http.Handler. The SetupMux function was created to handle global middleware.
 
 import (
+	"flag"
+	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/andreshungbz/lab2-migrations-refactoring/internal/routes"
 )
 
 func main() {
+	// Flags
+
+	// Server port
+	port := flag.Int("port", 4000, "Port to start the local server on.")
+	flag.Parse()
+	if !(*port >= 1 && *port <= 65535) {
+		fmt.Fprintf(os.Stderr, "[ERROR] Port %d invalid. Port must be 1 - 65535.\n", *port)
+	}
+
 	// Route multiplexer setup
 	mux := http.NewServeMux()
 	routes.SetupRoutes(mux)            // handler registration & route-specific middleware
 	wrappedMux := routes.SetupMux(mux) // global middleware
 
-	// Start local web server on port 4000
-	log.Print("[CMPS3162-LAB-02] HTTP Server Starting @ http://localhost:4000/")
-	err := http.ListenAndServe(":4000", wrappedMux)
+	// Start local server
+	log.Printf("[CMPS3162-LAB-02] HTTP Server Starting @ http://localhost:%d/", *port)
+	err := http.ListenAndServe(fmt.Sprintf(":%d", *port), wrappedMux)
 	log.Fatal(err)
 }
