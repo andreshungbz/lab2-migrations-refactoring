@@ -8,25 +8,25 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/andreshungbz/lab2-migrations-refactoring/internal/routes"
+	"github.com/andreshungbz/lab2-migrations-refactoring/internal/data"
 )
 
 // Unit Tests
 
 func TestHomeHandler(t *testing.T) {
-	assertResponse(t, routes.Data["home"].Path, HomeHandler, routes.Data["home"].Text)
+	assertResponse(t, data.Routes["home"].Path, HomeHandler, data.Routes["home"].Text)
 }
 
 func TestAboutHandler(t *testing.T) {
-	assertResponse(t, routes.Data["about"].Path, AboutHandler, routes.Data["about"].Text)
+	assertResponse(t, data.Routes["about"].Path, AboutHandler, data.Routes["about"].Text)
 }
 
 func TestContactHandler(t *testing.T) {
-	assertResponse(t, routes.Data["contact"].Path, ContactHandler, routes.Data["contact"].Text)
+	assertResponse(t, data.Routes["contact"].Path, ContactHandler, data.Routes["contact"].Text)
 }
 
 func TestCalculateHandler(t *testing.T) {
-	assertResponse(t, routes.Data["calculate"].Path, CalculateHandler, routes.Data["calculate"].Text)
+	assertResponse(t, data.Routes["calculate"].Path, CalculateHandler, data.Routes["calculate"].Text)
 }
 
 // Helper Functions

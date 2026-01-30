@@ -1,16 +1,10 @@
-// Filename: internal/routes/data.go
-// HTTP Response content data for each route.
+// Filename: internal/data/content.go
+// Contains content used throughout the program.
 
-package routes
+package data
 
-// Route stores the path and response body text.
-type Route struct {
-	Path string
-	Text string
-}
-
-// Data contains a collection of route path and text.
-var Data = map[string]Route{
+// Routes contains a collection of route path and text.
+var Routes = map[string]Route{
 	"home": {
 		Path: "/",
 		Text: "Hey, Andres here! Welcome to my CMPS3161 Lab 1! My semester project will be on Hotel Room & Housekeeping Management since I recently engaged with the Westin hotel in the Boston Seaport District. It will be fun investigating how hotels in Belize are similar or different.\n",

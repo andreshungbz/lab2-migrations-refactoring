@@ -7,22 +7,22 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/andreshungbz/lab2-migrations-refactoring/internal/routes"
+	"github.com/andreshungbz/lab2-migrations-refactoring/internal/data"
 )
 
 // HomeHandler writes a welcome message and elaborates on the choice of semester project.
 func HomeHandler(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte(routes.Data["home"].Text))
+	w.Write([]byte(data.Routes["home"].Text))
 }
 
 // AboutHandler writes information about myself (the student).
 func AboutHandler(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte(routes.Data["about"].Text))
+	w.Write([]byte(data.Routes["about"].Text))
 }
 
 // ContactHandler writes a student email address and their GitHub username.
 func ContactHandler(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte(routes.Data["contact"].Text))
+	w.Write([]byte(data.Routes["contact"].Text))
 }
 
 // CalculateHandler writes a simple mathematical expression.
