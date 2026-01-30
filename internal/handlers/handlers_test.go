@@ -1,30 +1,32 @@
-// Filename: cmd/api/main_test.go
+// Filename: internal/handlers/handlers_test.go
 // HTTP test requests for reponse status and body.
 
-package main
+package handlers
 
 import (
 	"net/http"
 	"net/http/httptest"
 	"testing"
+
+	"github.com/andreshungbz/lab2-migrations-refactoring/internal/routes"
 )
 
 // Unit Tests
 
 func TestHomeHandler(t *testing.T) {
-	assertResponse(t, data["home"].Path, homeHandler, data["home"].Text)
+	assertResponse(t, routes.Data["home"].Path, HomeHandler, routes.Data["home"].Text)
 }
 
 func TestAboutHandler(t *testing.T) {
-	assertResponse(t, data["about"].Path, aboutHandler, data["about"].Text)
+	assertResponse(t, routes.Data["about"].Path, AboutHandler, routes.Data["about"].Text)
 }
 
 func TestContactHandler(t *testing.T) {
-	assertResponse(t, data["contact"].Path, contactHandler, data["contact"].Text)
+	assertResponse(t, routes.Data["contact"].Path, ContactHandler, routes.Data["contact"].Text)
 }
 
 func TestCalculateHandler(t *testing.T) {
-	assertResponse(t, data["calculate"].Path, calculateHandler, data["calculate"].Text)
+	assertResponse(t, routes.Data["calculate"].Path, CalculateHandler, routes.Data["calculate"].Text)
 }
 
 // Helper Functions
