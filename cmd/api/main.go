@@ -1,5 +1,5 @@
 // Filename: cmd/api/main.go
-// A simple HTTP server with routes and handlers.
+// A simple HTTP server with routes, handlers, and middleware.
 
 // NOTE: Because the instructions specify a function signature of SetupRoutes(mux *http.ServeMux),
 // it can only handle route-specific middleware since the in-class middleware signature specifies
@@ -14,8 +14,6 @@ import (
 	"github.com/andreshungbz/lab2-migrations-refactoring/internal/routes"
 )
 
-// Main Program
-
 func main() {
 	// Route multiplexer setup
 	mux := http.NewServeMux()
@@ -23,7 +21,7 @@ func main() {
 	wrappedMux := routes.SetupMux(mux) // global middleware
 
 	// Start local web server on port 4000
-	log.Print("CMPS3162 Lab 2 Server Starting on :4000")
+	log.Print("[CMPS3162-LAB-02] HTTP Server Starting @ http://localhost:4000/")
 	err := http.ListenAndServe(":4000", wrappedMux)
 	log.Fatal(err)
 }
