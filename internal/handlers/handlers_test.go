@@ -12,18 +12,22 @@ import (
 
 // UNIT TESTS
 
+// TestHomeHandler asserts the expected HTTP response status code content for /
 func TestHomeHandler(t *testing.T) {
 	assertResponse(t, data.Routes["home"].Path, HomeHandler, data.Routes["home"].Text)
 }
 
+// TestAboutHandler asserts the expected HTTP response status code and content for /about
 func TestAboutHandler(t *testing.T) {
 	assertResponse(t, data.Routes["about"].Path, AboutHandler, data.Routes["about"].Text)
 }
 
+// TestContactHandler asserts the expected HTTP response status code and content for /contact
 func TestContactHandler(t *testing.T) {
 	assertResponse(t, data.Routes["contact"].Path, ContactHandler, data.Routes["contact"].Text)
 }
 
+// TestCalculateHandler asserts the expected HTTP response status code and content for /calculate
 func TestCalculateHandler(t *testing.T) {
 	assertResponse(t, data.Routes["calculate"].Path, CalculateHandler, data.Routes["calculate"].Text)
 }
