@@ -1,5 +1,9 @@
 # CMPS3162 Lab #2
 
+## YouTube Demo
+
+https://youtu.be/dXv-Thtw4DA
+
 ## Database Migrations and Code Refactoring
 
 | Key               | Value                                          |
